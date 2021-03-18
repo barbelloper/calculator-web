@@ -1,0 +1,73 @@
+@import "reset.css";
+* {
+  box-sizing: border-box;
+  font-size: 20px;
+}
+button {
+  border: none;
+  color: white;
+  background-color: #363439;
+}
+body {
+  margin-top: 10px;
+  padding: 50px;
+  background-color: rgb(19, 16, 16);
+}
+
+.js-calform input :focus {
+  border: none;
+}
+.js-calform input {
+  border: none;
+  width: 300px;
+  height: 50px;
+  margin-right: 24px;
+  background-color: rgb(19, 16, 16);
+  color: white;
+  text-align: right;
+  font-size: 30px;
+}
+.calform__row button:not([class="js-calform__0 calform__0"]) {
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 0px 5px;
+}
+.calform__0 {
+  width: 210px;
+  height: 50px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+.calform__row {
+  width: 450px;
+  height: 60px;
+}
+.calform__row:first-child button {
+  background-color: #a7aab1;
+}
+.calform__row button:nth-child(4) {
+  background-color: #fe8e00;
+}
+.calform__row:nth-child(5) button:nth-child(3) {
+  background-color: #fe8e00;
+}
+
+@keyframes click {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+button:hover {
+  outline: none;
+  animation: click 0.3s ease-in-out forwards;
+}
+button:focus {
+  outline: none;
+}
