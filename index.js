@@ -290,7 +290,7 @@ function resetHandler(event) {
 }
 function equalHandler(event) {
   event.preventDefault();
-  getNum = parseInt(localStorage.getItem(`num${cnt}`));
+  const getNum = parseInt(localStorage.getItem(`num${cnt}`));
   let computation = localStorage.getItem("Computation");
   if (localStorage.getItem(`num1`) === null) {
     result.value = getNum;
