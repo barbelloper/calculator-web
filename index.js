@@ -20,7 +20,7 @@ let numList = [];
 let cnt = 0;
 function num0Handler(event) {
   event.preventDefault();
-  selectedNum = event.target.innerText;
+  const selectedNum = event.target.innerText;
   numList.push(selectedNum);
   numList.forEach(function (num) {
     tempNum = tempNum + num;
@@ -31,7 +31,7 @@ function num0Handler(event) {
 }
 function num1Handler(event) {
   event.preventDefault();
-  selectedNum = event.target.innerText;
+  const selectedNum = event.target.innerText;
 
   numList.push(selectedNum);
   numList.forEach(function (num) {
@@ -43,7 +43,7 @@ function num1Handler(event) {
 }
 function num2Handler(event) {
   event.preventDefault();
-  selectedNum = event.target.innerText;
+  const selectedNum = event.target.innerText;
   numList.push(selectedNum);
   numList.forEach(function (num) {
     tempNum = tempNum + num;
@@ -54,7 +54,7 @@ function num2Handler(event) {
 }
 function num3Handler(event) {
   event.preventDefault();
-  selectedNum = event.target.innerText;
+  const selectedNum = event.target.innerText;
   numList.push(selectedNum);
   numList.forEach(function (num) {
     tempNum = tempNum + num;
@@ -65,7 +65,7 @@ function num3Handler(event) {
 }
 function num4Handler(event) {
   event.preventDefault();
-  selectedNum = event.target.innerText;
+  const selectedNum = event.target.innerText;
   numList.push(selectedNum);
   numList.forEach(function (num) {
     tempNum = tempNum + num;
@@ -76,7 +76,7 @@ function num4Handler(event) {
 }
 function num5Handler(event) {
   event.preventDefault();
-  selectedNum = event.target.innerText;
+  const selectedNum = event.target.innerText;
   numList.push(selectedNum);
   numList.forEach(function (num) {
     tempNum = tempNum + num;
@@ -87,7 +87,7 @@ function num5Handler(event) {
 }
 function num6Handler(event) {
   event.preventDefault();
-  selectedNum = event.target.innerText;
+  const selectedNum = event.target.innerText;
   numList.push(selectedNum);
   numList.forEach(function (num) {
     tempNum = tempNum + num;
@@ -98,7 +98,7 @@ function num6Handler(event) {
 }
 function num7Handler(event) {
   event.preventDefault();
-  selectedNum = event.target.innerText;
+  const selectedNum = event.target.innerText;
   numList.push(selectedNum);
   numList.forEach(function (num) {
     tempNum = tempNum + num;
@@ -109,7 +109,7 @@ function num7Handler(event) {
 }
 function num8Handler(event) {
   event.preventDefault();
-  selectedNum = event.target.innerText;
+  const selectedNum = event.target.innerText;
   numList.push(selectedNum);
   numList.forEach(function (num) {
     tempNum = tempNum + num;
@@ -120,7 +120,7 @@ function num8Handler(event) {
 }
 function num9Handler(event) {
   event.preventDefault();
-  selectedNum = event.target.innerText;
+  const selectedNum = event.target.innerText;
   numList.push(selectedNum);
   numList.forEach(function (num) {
     tempNum = tempNum + num;
@@ -131,8 +131,7 @@ function num9Handler(event) {
 }
 function plusHandler(event) {
   event.preventDefault();
-
-  getNum = parseInt(localStorage.getItem(`num${cnt}`));
+  const getNum = parseInt(localStorage.getItem(`num${cnt}`));
   let computation = localStorage.getItem("Computation");
   if (localStorage.getItem(`num1`) === null) {
     result.value = getNum;
@@ -169,8 +168,7 @@ function plusHandler(event) {
 }
 function multHandler(event) {
   event.preventDefault();
-
-  getNum = parseInt(localStorage.getItem(`num${cnt}`));
+  const getNum = parseInt(localStorage.getItem(`num${cnt}`));
   let computation = localStorage.getItem("Computation");
   if (localStorage.getItem(`num1`) === null) {
     result.value = getNum;
@@ -209,7 +207,7 @@ function multHandler(event) {
 function divideHandler(event) {
   event.preventDefault();
 
-  getNum = parseInt(localStorage.getItem(`num${cnt}`));
+  const getNum = parseInt(localStorage.getItem(`num${cnt}`));
   let computation = localStorage.getItem("Computation");
   if (localStorage.getItem(`num1`) === null) {
     result.value = getNum;
@@ -247,8 +245,7 @@ function divideHandler(event) {
 
 function minusHandler(event) {
   event.preventDefault();
-
-  getNum = parseInt(localStorage.getItem(`num${cnt}`));
+  const getNum = parseInt(localStorage.getItem(`num${cnt}`));
   let computation = localStorage.getItem("Computation");
   if (localStorage.getItem(`num1`) === null) {
     result.value = getNum;
@@ -287,7 +284,6 @@ function minusHandler(event) {
 function resetHandler(event) {
   event.preventDefault();
   numList = [];
-  tempAnswer = 0;
   localStorage.clear();
   result.value = 0;
   cnt = 0;
